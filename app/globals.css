@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-bg-main text-text-primary font-sans;
+    line-height: 1.7;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply block text-text-secondary no-underline py-3 px-4 mb-1 rounded-lg transition-all text-[0.95rem] font-medium;
+  }
+  
+  .nav-link:hover {
+    @apply bg-bg-elevated text-text-primary pl-5;
+  }
+  
+  .nav-link.active {
+    @apply bg-primary text-white font-semibold;
+  }
+  
+  .stat-card {
+    @apply bg-gradient-to-br from-bg-secondary to-bg-elevated border border-border rounded-xl p-8 transition-all relative overflow-hidden;
+  }
+  
+  .stat-card:hover {
+    @apply -translate-y-2 shadow-lg;
+  }
+  
+  .feature-card {
+    @apply bg-bg-main border-2 border-border rounded-xl p-8 transition-all;
+  }
+  
+  .feature-card:hover {
+    @apply -translate-y-2 shadow-lg border-primary;
+  }
+  
+  .highlight-box {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-50 border-l-4 border-primary rounded-xl p-7 my-10 shadow-sm;
+  }
+  
+  .code-block {
+    @apply bg-gray-900 border border-gray-700 rounded-xl p-8 overflow-x-auto font-mono text-sm text-gray-200 my-8 shadow-md;
+  }
+}
